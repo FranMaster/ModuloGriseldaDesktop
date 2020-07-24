@@ -1,0 +1,104 @@
+﻿<UserControl x:Class="CargaNet.View.PsrView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CargaNet.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Background="#FF1A1C1E"
+             Foreground="White"
+             DataContext="{Binding Main,Source={StaticResource Locator}}">
+    <Grid DataContext="{Binding Psr}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Nuevo Psr">
+            <WrapPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Nombre Psr: " Foreground="White"/>
+                    <TextBox Width="120" Text="{Binding NombrePsr,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Dirección: "  Foreground="White"/>
+                    <TextBox Width="120" Text="{Binding DireccionPsr,UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Pin: "  Foreground="White"/>
+                    <TextBox Width="120" Text="{Binding Pin,UpdateSourceTrigger=PropertyChanged}"  HorizontalAlignment="Left"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+            
+                    <Button  Command="{Binding BtnCrear}" Height="20" Margin="10 0 0 0" Padding="10 0 10 0">
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/View/img/anadir.png" Stretch="Fill" Margin="2"/>
+                                <TextBlock Text="Crear Psr"/>
+                            </StackPanel>
+                        </Button.Content>
+                    </Button>
+                </StackPanel>
+            </WrapPanel>
+        </GroupBox>
+        <GroupBox Grid.Row="1" Header="Datos">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <WrapPanel Height="30" Orientation="Horizontal">
+
+                    <Button  Command="{Binding BtnListar}"  Margin="10 0 0 0" >
+                        <Button.Content>
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/View/img/actualizar.png" Stretch="Fill" Margin="2"/>
+                                <Label Content="Cargar Psr" />
+                            </StackPanel>
+                        </Button.Content>
+
+                    </Button>
+
+                </WrapPanel>
+                <ListView Grid.Row="1" Margin="10" 
+                                   IsEnabled="{Binding EnableGrid,UpdateSourceTrigger=PropertyChanged}"
+                                   ItemsSource="{Binding ListadoPcr}"
+                                   SelectedItem="{Binding UsuarioSelccionado }">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Nombre Psr" Width="200" DisplayMemberBinding="{Binding nombre}" />
+                            <GridViewColumn Header="Dirección" Width="200" DisplayMemberBinding="{Binding direccion}" />
+                            <GridViewColumn Header="Pin" Width="100" DisplayMemberBinding="{Binding pin}" />
+                            <GridViewColumn Header="Acciones" Width="200">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <WrapPanel>
+                                            <Button  Command="{Binding BtnEditar}" Height="20" Margin="10 0 0 0" Padding="10 0 10 0">
+                                                <Button.Content>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Image Source="/View/img/lapiz.png" Stretch="Fill" Margin="2"/>
+                                                    </StackPanel>
+                                                </Button.Content>
+                                            </Button>
+                                            <Button  Command="{Binding BtnBorrar}" Height="20" Margin="10 0 0 0" Padding="10 0 10 0">
+                                                <Button.Content>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <Image Source="/View/img/eliminar.png" Stretch="Fill" Margin="2"/>
+                                                    </StackPanel>
+                                                </Button.Content>
+                                            </Button>
+                                        </WrapPanel>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+
+</UserControl>

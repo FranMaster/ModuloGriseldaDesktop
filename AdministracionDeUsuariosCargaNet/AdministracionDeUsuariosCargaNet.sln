@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CargaNet", "CargaNet\CargaNet.csproj", "{78DFD281-FA12-41CC-BD32-FFE276D62F1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiConsumer", "ApiConsumer-4.6.1\ApiConsumer\ApiConsumer.csproj", "{330D0DB4-D9C4-400B-8E0E-8D74040B1391}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{AD3D90AB-79B7-4769-B4B5-296B9E82B344}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78DFD281-FA12-41CC-BD32-FFE276D62F1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78DFD281-FA12-41CC-BD32-FFE276D62F1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78DFD281-FA12-41CC-BD32-FFE276D62F1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78DFD281-FA12-41CC-BD32-FFE276D62F1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{330D0DB4-D9C4-400B-8E0E-8D74040B1391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{330D0DB4-D9C4-400B-8E0E-8D74040B1391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{330D0DB4-D9C4-400B-8E0E-8D74040B1391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{330D0DB4-D9C4-400B-8E0E-8D74040B1391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD3D90AB-79B7-4769-B4B5-296B9E82B344}.Debug|Any CPU.ActiveCfg = Debug
+		{AD3D90AB-79B7-4769-B4B5-296B9E82B344}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6C5A4CE-DE50-405D-818E-E551E9A956E6}
+	EndGlobalSection
+EndGlobal

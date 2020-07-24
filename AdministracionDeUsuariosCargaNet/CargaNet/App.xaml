@@ -1,0 +1,12 @@
+﻿<Application x:Class="CargaNet.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CargaNet"
+             xmlns:infra="clr-namespace:CargaNet.Infrastructure"
+             StartupUri="View/PrincipalPage.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <infra:InstanceLocator x:Key="Locator"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
